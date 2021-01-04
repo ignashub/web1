@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Snake Game</title>
+        <style>
+            canvas{
+                display: block;
+                margin:  auto;
+                padding: 80px;
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
+
+            <meta charset='UTF-8'>
+             <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+            <div class="navbar">
+                    <a href="#" class="toggle" id="navHamburger">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                    <a href="index.html" class="brand">Home</a>
+                    <div class="left">
+                        <a href="login.html" class="link">Login</a>
+                        <a href="logout.php" class="link">LogOut</a>
+                        <a href="shop.html" class="link">Shop</a>
+                        <a href="about.html" class="link">About</a>
+
+                    </div>
+                    <div class="right">
+                        <a href="contact.html" class="link">Contact Us</a>
+                    </div>
+                </div>
+                </body>
+
+                <script>
+                const navHamburger = document.querySelector('#navHamburger');
+                navHamburger.addEventListener('click', (e) => {
+                    navHamburger.parentElement.classList.toggle('active');
+                })
+                </script>
+
+    <canvas id="snake" width="608" height="608"></canvas>
+    <script src="snake.js"></script>
+</body>
+</html>

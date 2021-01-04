@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ::eShop::</title>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script>
+
+        <meta charset='UTF-8'>
+         <link rel="stylesheet" href="style/style.css">
+
+
+</head>
+<body>
+    <div class="navbar">
+    <a href="#" class="toggle" id="navHamburger">
+        <i class="fas fa-bars"></i>
+    </a>
+    <a href="index.html" class="brand">Home</a>
+    <div class="left">
+        <a href="login.php" class="link">Login</a>
+        <a href="logout.php" class="link">LogOut</a>
+        <a href="shop.php" class="link">Shop</a>
+        <a href="about.php" class="link">About</a>
+
+
+    </div>
+    <div class="right">
+        <a href="contact.php" class="link">Contact Us</a>
+    </div>
+</div>
+</body>
+
+<script>
+const navHamburger = document.querySelector('#navHamburger');
+navHamburger.addEventListener('click', (e) => {
+    navHamburger.parentElement.classList.toggle('active');
+})
+</script>
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="images/1.jpg" style="width:100%">
+      <div class="text">Best Gadgets for Office</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 2</div>
+      <img src="images/laptops.bmp" style="width:100%">
+      <div class="text">All that you need</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/printers.jpg" style="width:100%">
+      <div class="text">Is here</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+  <div class="bottomimages">
+    <div class="kids">
+     <a href = "snake.html" ><img src ="images/kids.png"></a></div>
+     <div class="discount">
+       <a href="shop.php">
+       <img src="images/discount.jpg"></a>
+     </div>
+    </div>
+  <div class="copyrightColor">
+    <footer>&copy; Copyright 2019 HTML.am</footer>
+  </div>
+</body>
+</html>
